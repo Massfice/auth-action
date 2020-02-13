@@ -1,0 +1,22 @@
+{
+    "name": "massfice/auth-action",
+    "description": "This is a package that contains \"protected\" actions. It's for my diploma project.",
+    "type": "package",
+    "require": {
+        "massfice/action": "^v1.0",
+        "massfice/service": "^v1.0",
+        "massfice/smart": "^v1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Massfice",
+            "email": "adrian.marian.tomasz.larysz@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Massfice\\AuthAction\\": "src/"
+        }
+    }
+}
