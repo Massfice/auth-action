@@ -16,7 +16,8 @@ class AuthService implements ServiceObject {
         return "http://localhost/social-authenticator/auth/json".$sid;
     }
 
-    public function prepare(&$curl) {
+    public function prepare(&$curl, array $data) : array {
+        return [];
     }
 
     public function data(array $data) : ?ServiceData {
