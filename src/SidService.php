@@ -12,10 +12,12 @@ class SidService implements ServiceObject {
         return "http://localhost/social-authenticator/sid/json";
     }
 
-    public function prepare(&$curl) {
+    public function prepare(&$curl, array $data) : array {
         curl_setopt($curl, CURLOPT_COOKIEJAR, "cookie.jar");
         curl_setopt($curl, CURLOPT_COOKIEFILE, "cookie.jar");
-    }
+
+        return [];
+    }   
 
     public function data(array $data) : ?ServiceData {
         return null;
