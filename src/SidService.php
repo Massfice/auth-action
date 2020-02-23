@@ -13,7 +13,6 @@ class SidService implements ServiceObject {
     }
 
     public function prepare(&$curl) {
-        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
         curl_setopt($curl, CURLOPT_COOKIEJAR, "cookie.jar");
         curl_setopt($curl, CURLOPT_COOKIEFILE, "cookie.jar");
     }
