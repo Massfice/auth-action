@@ -9,6 +9,8 @@ use Massfice\ResponseStatus\ResponseStatusFactory;
 use Massfice\ResponseStatus\ResponseStatus;
 use Massfice\Service\ServiceExecutor;
 
+use Massfice\Action\Standart\SeeOther;
+
 abstract class AuthJsonAction implements JsonAction {
 
     protected function getSid() : SidService {
