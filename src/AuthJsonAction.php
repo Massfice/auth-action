@@ -10,11 +10,18 @@ use Massfice\ResponseStatus\ResponseStatus;
 use Massfice\Service\ServiceExecutor;
 
 use Massfice\Action\Standart\SeeOther;
+use Massfice\AuthenticatorServices\AuthService;
+use Massfice\AuthenticatorServices\SidService;
 
 abstract class AuthJsonAction implements JsonAction {
 
+    protected function getOldSid() : ?string {
+        return null;
+    }
+
     protected function getSid() : SidService {
         $sid = new SidService();
+        $sid->sid = $this->getOldSid();
         $sid = ServiceExecutor::execute($sid);
         return $sid;
     }
